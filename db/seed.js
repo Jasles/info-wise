@@ -86,7 +86,7 @@ let newEvents=[
     time: '10:02',
     city:  {
     type: Schema.Types.ObjectId,
-    ref: 'City',
+    ref: 'city',
 
     }
     
@@ -112,9 +112,9 @@ City.deleteMany().then(() => {
   }).then(cities => {
       cityObjects= cities
 
-      return Event.create(newEvent);
+      return Event.create(newEvents);
   }).then(events => {
-      eventObjects = Event;
+      eventObjects = events;
 
     cityObjects[0].state = stateObjects[0];
     return cityObjects[0].save();
@@ -158,7 +158,7 @@ City.deleteMany().then(() => {
     return cityObjects[13].save();
   })
   .then(()=> {EventObjects[0].state = cityObjects[0];
-  return EventObjects[0].save();  
+  return eventObjects[0].save();  
   })
 
 

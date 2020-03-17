@@ -4,8 +4,8 @@ const Event= require('../models/Event.js')
 
 
 eventRouter.get('/',(req,res)=>{
-    Event.find().then((event) => { 
-        res.json(event);
+    Event.find().then((events) => { 
+        res.json(events);
     });
 });
 
