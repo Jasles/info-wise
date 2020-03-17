@@ -1,21 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Cities from './Cities'
-import { Link } from 'react-router-dom';
+import { Link } from'react-router-dom';
 
 
 export default class events extends Component {
-   State= {
-         name: '',
-         city:  {
-                state: '',
-                name: '',
-                },
-
-        comment: '',
-        image: '',
-        time:'',
-        location:'',
+   state= {
+         events:[],
         }
 
 
@@ -44,7 +35,7 @@ componentDidMount() {
         return (
             <div>
              {
-                 this.state.event.map((event, i) => {
+                 this.state.events.map((event, i) => {
                      return (
                          <div key={ i } className=" Container-3">
                         <Link to={ event._id }>{ event.name } </Link>
