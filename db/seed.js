@@ -78,17 +78,14 @@ let newStates=[
         name: 'Texas'
     },
 ]
+
 let newEvents=[
   {
     name: 'Tornado',
     comment:' This morning',
     image: String,
     time: '10:02',
-    city:  {
-    type: Schema.Types.ObjectId,
-    ref: 'city',
-
-    }
+    city: 'Alpharetta'
     
   }
 ]
@@ -157,7 +154,7 @@ City.deleteMany().then(() => {
   }).then(()=> {cityObjects[13].state = stateObjects[2];
     return cityObjects[13].save();
   })
-  .then(()=> {EventObjects[0].state = cityObjects[0];
+  .then(()=> {eventObjects[0].state = cityObjects[0];
   return eventObjects[0].save();  
   })
 

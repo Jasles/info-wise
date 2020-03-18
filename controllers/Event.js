@@ -9,10 +9,18 @@ eventRouter.get('/',(req,res)=>{
     });
 });
 
-eventRouter.get('/:id', (req,res)=>{
-   Event.find({city:req.params.id}).then(event => { 
-        console.log('id')
-        res.json(event);
+eventRouter.get('/cityname/:name', (req,res)=>{
+    Event.find({city:req.params.name}).then(event => { 
+         console.log('id')
+         res.json(event);
+     }); 
+ });
+
+
+eventRouter.post('/', (req, res) => {
+    Event.create(req.body).then(() => {
+        res.status(200).end();
     });
 });
+
 module.exports= eventRouter;

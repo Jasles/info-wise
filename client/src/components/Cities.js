@@ -30,7 +30,7 @@ export default class Cities extends Component {
                      return (
                          <div key={ i } className=" Container-2">
                       
-                             <Link to={`/${city._id}`}>{ city.name } </Link>
+                             <Link to={`/events/${city.name}`}>{ city.name } </Link>
 
                          </div>
                           

@@ -25,15 +25,17 @@ export default class HomePage extends Component {
         return (
             <div>
             {
-                this.state.states.map((state, i) => {
+                
+                 this.state.states.map((state, i) => {
                     return (
                         <div key={ i } className=" Container-1">
                             
-                            <Link to={`/${state._id}`}>{ state.name }</Link>
+                            <Link to={`/cities/${state._id}`}>{ state.name }</Link>
                         </div>
-                            
-                    )
-                })
+                        
+                            )
+                 })
+                
             }
             </div>
         )

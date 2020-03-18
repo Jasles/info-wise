@@ -7,23 +7,41 @@ import { Link } from'react-router-dom';
 export default class events extends Component {
    state= {
          events:[],
+         showEventForm: false,
+         newEvent: {
+            name: '',
+    
+        },
         }
 
-
-submitUpdateForm = (event) => {
-    event.preventDefault();
-    const eventId = this.props.match.params.eventId;
-    axios.put('/api/event/' + eventId, this.state.event).then(() => {
-        this.getEvent();
-    });
-}
+  
 getEvent = () => {
-    axios.get(`/api/event/${this.props.match.params.cityId}`).then((response) => {
+    axios.get(`/api/event/cityname/${this.props.match.params.cityName}`).then((response) => {
         const foundEvent = response.data;
+        console.log(response.data)
         this.setState({
             events: foundEvent,
         });
     });
+
+submitCreateForm = (event) => {
+        event.preventDefault();
+        axios.post('/api/event/cityname', this.state.newEvent).then(() => {
+            this.toggleCreateForm();
+            this.getEvent();
+        });
+    }
+toggleCreateForm = () => {
+        const newShowCreateForm = !this.state.showCreateForm;
+        this.setState({
+            showCreateForm: newShowCreateForm,
+        });
+    }
+
+
+    console.log(
+        this.props.match.params.cityId
+    )
 }
 
 componentDidMount() {
@@ -34,29 +52,38 @@ componentDidMount() {
 
         return (
             <div>
+
              {
                  this.state.events.map((event, i) => {
                      return (
                          <div key={ i } className=" Container-3">
-                        <Link to={ event._id }>{ event.name } </Link>
+                        <Link to={`/${event._id}` }>{ event.name } {event.city} {event.comment} 
+                        {event.time}</Link>
                          </div>
                                 
                      )
                  })
              }
-                   <div>
-                         
-          
-                         <form onSubmit={ this.submitUpdateForm }>
-                             <input type="text" name="name" value={ this.state.editCreature.name }
-                                 onChange={ this.changeInput }/>
-                             
-                             <input type="submit" value="Update"/>
-                         </form>
-         
-                         <button onClick={ this.clickDelete }>Delete creature</button>
-                     </div>  
+             <div>
+                    <button onClick={ this.toggleCreateForm }>Create creature</button>
+                </div>
+                {
+                    this.state.showCreateForm
+                        ? <form onSubmit={ this.submitCreateForm }>
+                            <input type="text" name="name" onChange={ this.changeInput }/>
+                            <input type="text" name="description" onChange={ this.changeInput }/>
+                            <input type="submit" value="Create"/>
+                          </form>
+                        : null
+                }
+           
+             
+                
+           
              </div>
+             
+        
+            
         )
     }
 }

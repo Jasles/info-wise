@@ -12,9 +12,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={ HomePage }/> 
-          {/* <Route  path="/cities" component={ Cities}/> */}
-          <Route path= "/:stateId" component={ Cities }/>
-          <Route path= "/:cityId" component={ Events }/>
+          <Route path= "/cities/:stateId" component={ Cities }/>
+          <Route path= "/events/:cityName" component={ Events }/>
         </Switch>
       </Router>
     </div>
