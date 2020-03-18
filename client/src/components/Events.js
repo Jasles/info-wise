@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Cities from './Cities'
 import { Link } from'react-router-dom';
 
 
 export default class events extends Component {
    state= {
          events:[],
-         showEventForm: false,
+         showCreateForm: false,
          newEvent: {
             name: '',
     
@@ -31,6 +30,7 @@ submitCreateForm = (event) => {
             this.getEvent();
         });
     }
+    
 toggleCreateForm = () => {
         const newShowCreateForm = !this.state.showCreateForm;
         this.setState({
@@ -65,7 +65,7 @@ componentDidMount() {
                  })
              }
              <div>
-                    <button onClick={ this.toggleCreateForm }>Create creature</button>
+                    <button onClick={ this.toggleCreateForm }>Create New Event</button>
                 </div>
                 {
                     this.state.showCreateForm
