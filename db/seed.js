@@ -83,7 +83,7 @@ let newEvents=[
   {
     name: 'Tornado',
     comment:' 3/19/2020',
-    image: String,
+    image: 'download.jpg',
     time: '8:02 AM',
     city: 'Alpharetta'
     
