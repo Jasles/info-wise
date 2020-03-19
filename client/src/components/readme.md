@@ -4,7 +4,7 @@
 
     Solution: Create a platform like craiglist where users can post current weather events, exact location, picture and comment. Other users can see information and be wiser in their decisin making as it relates to current weather events.
 
-Information is always key to wise decision making.
+``Information is always key to wise decision making.
 
              ![WIREFRAME]
              (https://www.lucidchart.com/documents/edit/e2aa25ce-1501-46ff-8273-a84f60124c3d/0_0)
@@ -15,6 +15,6 @@ Information is always key to wise decision making.
             ![Trello]
              (https://trello.com/b/T1BmkSeg/drone-aid)
 
-             
+
 
 
