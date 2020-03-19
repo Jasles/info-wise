@@ -6,9 +6,10 @@
 
 ``Information is always key to wise decision making.
 
-             [WIREFRAME](https://www.lucidchart.com/documents/edit/e2aa25ce-1501-46ff-8273-a84f60124c3d/0_0)
+             [WIREFRAME](https://www.lucidchart.com/invitations/accept/c046cf35-4c1f-493f-86a2-931940941229)
 
-            [ERG](https://www.lucidchart.com/documents/edit/6567b9b3-3768-43da-902e-4426e500244e/0_0)
+
+            [ERG](https://www.lucidchart.com/invitations/accept/4d125b5f-b5f5-46f3-a4d1-739d1df4cd23)
 
             [Trello](https://www.rello.com/b/T1BmkSeg/drone-aid)
 
