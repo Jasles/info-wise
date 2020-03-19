@@ -15,7 +15,7 @@
             ![Trello]
              (https://trello.com/b/T1BmkSeg/drone-aid)
 
-            ![heroku]
+            ![deployed heroku ]
              (https://weatherwize.herokuapp.com/)
 
 
