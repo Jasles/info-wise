@@ -60,9 +60,18 @@ componentDidMount() {
     render() {
 
         return (
+           
+            
+            
             <div>
+                 <div>
 
+                <h1>WeatherWise</h1>
+
+                </div>
              {
+                
+                
                  this.state.events.map((event, i) => {
                      return (
                          <div key={ i } className=" Container-3">
@@ -86,10 +95,10 @@ componentDidMount() {
                         : null
                 }
            
-             
+           </div>
                 
            
-             </div>
+             
              
         
             

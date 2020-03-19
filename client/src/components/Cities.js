@@ -38,6 +38,9 @@ export default class Cities extends Component {
                      )
                  })
              }
+             <div>
+                    <button onClick={ this.toggleCreateForm }>Add a New Event</button>
+            </div>
              </div>
          )
      }

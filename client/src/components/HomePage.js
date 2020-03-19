@@ -58,8 +58,8 @@ toggleCreateForm = () => {
         return (
             <div>
 
-            <h1>Hello</h1>
-            
+            <h1>WeatherWise</h1>
+            <h2>Share real-time weather events and their exact location here!</h2>
             <div>
             {
                
@@ -77,14 +77,13 @@ toggleCreateForm = () => {
                 
             }
                <div>
-                    <button onClick={ this.toggleCreateForm }>Create New State</button>
+                    <button className=" Button" onClick={ this.toggleCreateForm }>Create New State</button>
             </div>
                 {
                     this.state.showCreateForm
                         ? <form onSubmit={ this.submitCreateForm }>
-                            <input type="text" name="name" onChange={ this.changeInput }/>
-                            <input type="text" name="description" onChange={ this.changeInput }/>
-                            <input type="submit" value="Create"/>
+                            <input className=" input"input type="text" name="name" onChange={ this.changeInput }/>
+                            <input className=" button-2" type="submit" value="Create"/>
                           </form>
                         : null
                 }
