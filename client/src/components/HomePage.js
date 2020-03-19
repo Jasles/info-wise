@@ -58,8 +58,8 @@ toggleCreateForm = () => {
         return (
             <div>
 
-            <h1>WeatherWise</h1>
-            <h2>Share real-time weather events and their exact location here!</h2>
+            <h1>WeatherWISE</h1>
+            <h2>Share Real-Time Weather Events and the exact location information!</h2>
             <div>
             {
                
