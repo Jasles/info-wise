@@ -47,9 +47,11 @@ body{
   
 }
 
-.Container-1{
-  color: rgb(218, 125, 12);
+.Container-1 a{
+  color: rgb(252, 251, 250);
   text-decoration: none;
+  height: 25px;
+  font-weight: 5px;
 }
 
 .input{

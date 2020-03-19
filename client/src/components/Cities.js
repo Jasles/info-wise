@@ -24,7 +24,10 @@ export default class Cities extends Component {
 
 
          return (
+            
              <div>
+                 <h1>WeatherWise</h1>
+            <h2>Share real-time weather events and their exact location here!</h2>
              {
                  this.state.cities.map((city, i) => {
                      return (
