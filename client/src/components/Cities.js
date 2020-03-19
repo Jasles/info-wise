@@ -31,7 +31,7 @@ export default class Cities extends Component {
              {
                  this.state.cities.map((city, i) => {
                      return (
-                         <div key={ i } className=" Container-2">
+                         <div key={ i } className=" Container-1">
                       
                              <Link to={`/events/${city.name}`}>{ city.name } </Link>
 
