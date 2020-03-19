@@ -56,14 +56,14 @@ body{
 
 .input{
   
-  height:25px;
-  margin-left: 21px;
+  height:26px;
+  margin-left: 20px;
   
 }
 
 .Button{
 background-color: rgb(246, 250, 250);
-border-radius: 10px;
+border-radius: 11px;
 margin: 10px;
 height: 26px;
 }
