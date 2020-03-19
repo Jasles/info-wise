@@ -12,7 +12,14 @@ export default class events extends Component {
     
         },
         }
-
+changeInput = (event) => {
+    const updatedNewEvent = { ...this.state.newEvent };
+        updatedNewEvent[event.target.name] = event.target.value;
+        this.setState({
+            newEvent: updatedNewEvent,
+            });
+        }
+    
   
 getEvent = () => {
     axios.get(`/api/event/cityname/${this.props.match.params.cityName}`).then((response) => {
@@ -22,6 +29,7 @@ getEvent = () => {
             events: foundEvent,
         });
     });
+}
 
 submitCreateForm = (event) => {
         event.preventDefault();
@@ -30,13 +38,14 @@ submitCreateForm = (event) => {
             this.getEvent();
         });
     }
-    
+
 toggleCreateForm = () => {
         const newShowCreateForm = !this.state.showCreateForm;
+        console.log(newShowCreateForm)
         this.setState({
             showCreateForm: newShowCreateForm,
         });
-    }
+    
 
 
     console.log(
@@ -57,8 +66,8 @@ componentDidMount() {
                  this.state.events.map((event, i) => {
                      return (
                          <div key={ i } className=" Container-3">
-                        <Link to={`/${event._id}` }>{ event.name } {event.city} {event.comment} 
-                        {event.time}</Link>
+                        { event.name } {event.city} {event.comment} 
+                        {event.time}
                          </div>
                                 
                      )
@@ -66,7 +75,7 @@ componentDidMount() {
              }
              <div>
                     <button onClick={ this.toggleCreateForm }>Create New Event</button>
-                </div>
+            </div>
                 {
                     this.state.showCreateForm
                         ? <form onSubmit={ this.submitCreateForm }>

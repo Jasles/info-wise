@@ -82,9 +82,33 @@ let newStates=[
 let newEvents=[
   {
     name: 'Tornado',
-    comment:' This morning',
+    comment:' 3/19/2020',
     image: String,
-    time: '10:02',
+    time: '8:02 AM',
+    city: 'Alpharetta'
+    
+  },
+  {
+    name: 'Heavy Storm',
+    comment:' 3/16/2020',
+    image: String,
+    time: '10:32 PM',
+    city: 'Alpharetta'
+    
+  },
+  {
+    name: 'Tree Down',
+    comment:' 12/2/2020',
+    image: String,
+    time: '10:02 AM',
+    city: 'Alpharetta'
+    
+  },
+  {
+    name: 'Flash Flood',
+    comment:' 9/08/2020',
+    image: String,
+    time: '12:08 AM',
     city: 'Alpharetta'
     
   }

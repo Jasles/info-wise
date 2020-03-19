@@ -10,4 +10,13 @@ stateRouter.get('/',(req,res)=>{
 });
 
 
+
+
+stateRouter.post('/', (req, res) => {
+    State.create(req.body).then(() => {
+        res.status(200).end();
+    });
+});
+
+
 module.exports= stateRouter;
