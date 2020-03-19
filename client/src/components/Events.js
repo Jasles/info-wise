@@ -66,8 +66,8 @@ componentDidMount() {
             <div>
                  <div>
 
-                <h1>WeatherWise</h1>
-
+                <h1>WeatherWISE</h1>
+                
                 </div>
              {
                 

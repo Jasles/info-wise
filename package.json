@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "cd client && npm i && npm run build"
   },
   "author": "Jasmine Leslie",
   "license": "ISC",
