@@ -10,9 +10,9 @@
 
             [ERG](https://www.lucidchart.com/documents/edit/6567b9b3-3768-43da-902e-4426e500244e/0_0)
 
-            [Trello](https://trello.com/b/T1BmkSeg/drone-aid)
+            [Trello](https:www.//trello.com/b/T1BmkSeg/drone-aid)
 
-            [deployed heroku ](https://weatherwize.herokuapp.com/)
+            [deployed heroku ](https://www.weatherwize.herokuapp.com/)
 
 
 
